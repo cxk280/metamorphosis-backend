@@ -14,13 +14,6 @@ namespace :waterdrop do
       WaterDrop::AsyncProducer.call(message, topic: 'inline_batch_data')
     end
 
-    # Sends the initial ping to start ping-pong within Karafka
-    message = { 'counter' => 0 }.to_json
-    WaterDrop::SyncProducer.call(message, topic: 'ping')
-
-    message = { rand => rand }.to_json
-    WaterDrop::SyncProducer.call(message, topic: 'callbacked_data')
-
     # Sends the initial message to start chat within Karafka
     message = { 'counter' => 0 }.to_json
     WaterDrop::SyncProducer.call(message, topic: 'sendMessage')

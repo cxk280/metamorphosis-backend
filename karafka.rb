@@ -52,21 +52,6 @@ App.consumer_groups.draw do
     end
   end
 
-  # A ping-pong implementation using karafka-sidekiq backend
-  # @note The backend is totally optional, if you disable it, the game will
-  # work as well
-  consumer_group :async_pong do
-    topic :ping do
-      consumer Pong::PingConsumer
-      backend :sidekiq
-    end
-
-    topic :pong do
-      consumer Pong::PongConsumer
-      backend :sidekiq
-    end
-  end
-
   # A chat implementation using karafka-sidekiq backend
   # @note The backend is totally optional, if you disable it, the chat will
   # still work
