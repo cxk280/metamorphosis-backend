@@ -20,5 +20,12 @@ namespace :waterdrop do
 
     message = { rand => rand }.to_json
     WaterDrop::SyncProducer.call(message, topic: 'callbacked_data')
+
+    # Sends the initial message to start chat within Karafka
+    message = { 'counter' => 0 }.to_json
+    WaterDrop::SyncProducer.call(message, topic: 'sendMessage')
+
+    message = { rand => rand }.to_json
+    WaterDrop::SyncProducer.call(message, topic: 'callbacked_data')
   end
 end
