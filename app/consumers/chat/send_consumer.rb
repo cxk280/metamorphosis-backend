@@ -2,7 +2,7 @@
 
 # Namespace for everything related to chat
 module Send
-  # Catches the sent message and uses PingResponder to respond on a pong topic
+  # Catches the sent message and uses SendResponder to respond on a chat topic
   class SendConsumer < ApplicationConsumer
     # We increase the pings counter and respond
     def consume
