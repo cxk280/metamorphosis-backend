@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module Pong
+module Receive
   # Catches the pong and uses PongResponder to respond on a ping topic
-  class PongConsumer < ApplicationConsumer
+  class ReceiveConsumer < ApplicationConsumer
     # Increase counter and respond
     def consume
       # Just a small delay so we won't overuse the CPU
