@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Receive
-  # Catches the pong and uses PongResponder to respond on a chat topic
+module Chat
+  # Catches the received message and uses ReceiveResponder to respond on a chat topic
   class ReceiveConsumer < ApplicationConsumer
     # Increase counter and respond
     def consume

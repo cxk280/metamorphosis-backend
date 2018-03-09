@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Send
+module Chat
   # Responder triggered from within the SendConsumer
   class SendResponder < ApplicationResponder
     topic :sendMessage

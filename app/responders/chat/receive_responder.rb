@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Receive
+module Chat
   # Respnder triggered from within the ReceiveConsumer
   class ReceiveResponder < ApplicationResponder
     topic :receiveMessage
