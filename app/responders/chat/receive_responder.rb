@@ -3,7 +3,7 @@
 module Receive
   # Respnder triggered from within the ReceiveConsumer
   class ReceiveResponder < ApplicationResponder
-    topic :chat
+    topic :receiveMessage
 
     # @param data [Hash] any data that we want to send
     # @note Will be serialized to json

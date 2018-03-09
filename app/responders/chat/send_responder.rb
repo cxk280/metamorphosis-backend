@@ -3,7 +3,7 @@
 module Send
   # Responder triggered from within the SendConsumer
   class SendResponder < ApplicationResponder
-    topic :chat
+    topic :sendMessage
 
     # @param data [Hash] any data that we want to send
     # @note Will be serialized to json

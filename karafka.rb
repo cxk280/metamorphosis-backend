@@ -66,6 +66,21 @@ App.consumer_groups.draw do
       backend :sidekiq
     end
   end
+
+  # A chat implementation using karafka-sidekiq backend
+  # @note The backend is totally optional, if you disable it, the chat will
+  # still work
+  consumer_group :chat do
+    topic :sendMessage do
+      consumer SendConsumer::PingConsumer
+      backend :sidekiq
+    end
+
+    topic :receiveMessage do
+      consumer ReceiveConsumer::PongConsumer
+      backend :sidekiq
+    end
+  end
 end
 
 App.boot!
